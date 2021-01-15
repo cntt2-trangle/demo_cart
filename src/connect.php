@@ -7,9 +7,14 @@
 
     try {
         $conn = new PDO ("mysql:host=".$host_name.";dbname=".$db_name, $user_name, $password);
+
         $stmt = $conn->prepare("select * from product");
         $stmt->execute();
         $product = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // $stmtLogin = $conn->prepare("select * from admin");
+        // $stmtLogin->execute();
+        // $user = $stmtLogin->fetchAll(PDO::FETCH_ASSOC);
     }
 
     catch (PDOException $e) {
