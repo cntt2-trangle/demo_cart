@@ -1,0 +1,197 @@
+* { margin: 0; padding: 0;}
+
+body { margin-top: 30px; background-color: rgb(231, 228, 228);}
+
+:root {
+    --font1: 'Oswald', sans-serif;
+    --size1: 30px;
+    --lineheight1: 59px;
+    --font2: 'Inconsolata', monospace;
+    --size2: 20px;
+    --color2: #666;
+    --size3: 25px;
+    --size4: 40px;
+}
+
+/* start CSS cart icon */
+
+.cart-icon i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+    font-size: var(--size4);
+    color: #669999;
+}
+
+.cart-icon a {
+    margin-left: 30px;
+    margin-top: 30px;
+    position: absolute;
+    text-decoration: none;
+    color:  #3d5c5c;
+    font-weight: bold;
+    font-family: var(--font1);
+    font-size: var(--size3);
+    z-index: 2;
+    top: -25px;
+    left: -10px;
+}
+
+/* finish CSS cart icon */
+
+/* start CSS home page */
+.frame {
+    top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1140px;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.product {
+    width: 360px;
+    height: 366px;
+    font-family: segoe ui light;
+    font-size: 13px;
+    color: #414141;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.product .background { width: 100%; }
+
+.product .background-insert {
+    background-color: white;
+    width: 330px;
+    height: 336px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.product .layer-icon {
+    position: absolute;
+    font-size: 40px;
+    top: 33px;
+    left: 40px;
+    color: #414141;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.product .layer-icon a {
+    color: black;
+    text-decoration: none;
+    font-size: var(--size1);
+    padding: 10px;
+    display: block;
+}
+
+.product .layer-icon a:hover {
+    color: rgba(120, 163, 243, 0.979);
+}
+
+.product .layer-big-text {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.product .layer-small-text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 13px;
+    color: gray;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.product:hover .background-insert { opacity: 0.9; }
+
+.product:hover .layer-icon { opacity: 1; }
+
+.product:hover .layer-big-text { 
+    opacity: 1; 
+    bottom: 80px;
+    transition-delay: 0.2s;
+}
+
+.product:hover .layer-small-text { 
+    opacity: 1; 
+    transition-delay: 0.4s;
+}
+
+img {
+    width: 100%;
+}
+
+/* finish CSS home page */
+
+/* start CSS product detail page */
+
+.text-block {
+    display: flex;
+    width: 1170px;
+    margin: auto;
+    padding: 80px 0;
+    font-family: var(--font2);
+    font-size: var(--size2);
+    color: var(--color2);
+    justify-content: space-between;
+}
+
+.text-block .text-block-left { width: 35%; }
+
+.text-block .text-block-right { width: 60%; }
+
+.text-block .text-block-right p, 
+.text-block .text-block-right h1, 
+.text-block .text-block-right h3,
+.text-block .text-block-right div { padding: 15px; }
+
+
+.text-block .text-block-right a, button  {
+    opacity: 0.8;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 10px;
+}
+
+.text-block .text-block-right button  {
+    opacity: 0.8;
+    text-decoration: none;
+    color: var(--color2);
+    border-radius: 15px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.text-block .text-block-right a:hover { opacity: 1; }
+
+.text-block .text-block-right a:before {
+    content: "\f004";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: relative;
+    left: -10px;
+    transition: 0.3s;
+    font-size: var(--font2);
+    opacity: 0.8;
+}
+
+.text-block .text-block-right a:hover:before {
+    left: -3px;
+    opacity: 1;
+}
+
+/* finish CSS product detail page */
