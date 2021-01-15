@@ -31,7 +31,7 @@
                             <?php echo number_format($row["price"])." VND"; ?>
                         </h3>
                         <p>
-                            <?php echo $row["detail"] ?>
+                            <?php echo $row["description"] ?>
                         </p>
                         
                         <form action="InfomationCart.php" method="post">
